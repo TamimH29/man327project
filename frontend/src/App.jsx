@@ -1,16 +1,14 @@
 import { useState } from 'react';
 
 // Icon components
-const Camera = ({ size = 24 }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>;
 const Search = ({ size = 24 }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>;
 const Heart = ({ size = 24 }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>;
-const TrendingDown = ({ size = 24 }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline></svg>;
-const Leaf = ({ size = 24 }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>;
 const Star = ({ size = 24, className = "" }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>;
-const MapPin = ({ size = 24 }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>;
-const Package = ({ size = 24 }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16.5 9.4 7.55 4.24"></path><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><line x1="12" x2="12" y1="22" y2="12"></line></svg>;
-const ShoppingCart = ({ size = 24 }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>;
 const User = ({ size = 24 }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>;
+const Filter = ({ size = 24 }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>;
+const X = ({ size = 24 }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>;
+const Plus = ({ size = 24 }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>;
+const ChevronRight = ({ size = 24 }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6"></polyline></svg>;
 
 // Health Score Component
 const HealthScore = ({ score }) => (
@@ -22,224 +20,761 @@ const HealthScore = ({ score }) => (
   </div>
 );
 
-// Nutrition Row Component
-const NutritionRow = ({ label, value, bold, indent, indent2 }) => (
-  <div className={`flex justify-between border-b border-gray-200 py-1 ${indent ? 'pl-4' : indent2 ? 'pl-8' : ''}`}>
-    <span className={`text-sm ${bold ? 'font-bold' : ''}`}>{label}</span>
-    <span className={`text-sm ${bold ? 'font-bold' : ''}`}>{value}</span>
-  </div>
-);
+// Welcome/Landing Page
+const WelcomePage = ({ onSearch }) => {
+  const [searchQuery, setSearchQuery] = useState('');
+  
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      onSearch(searchQuery);
+    }
+  };
 
-// Product Details Component
-const ProductDetails = ({ product, onBack }) => (
-  <div className="max-w-6xl mx-auto">
-    <button onClick={onBack} className="mb-6 text-gray-600 hover:text-gray-900 font-medium">← Back to Results</button>
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <div className="bg-white rounded-2xl shadow-lg p-8">
-        <div className="flex items-start gap-6 mb-6">
-          <div className="text-8xl">{product.image}</div>
-          <div className="flex-1">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">{product.name}</h2>
-            <p className="text-xl text-gray-600 mb-4">{product.brand}</p>
-            <HealthScore score={product.healthScore} />
-            <div className="text-4xl font-bold text-green-600 mt-4">{product.price}</div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 flex items-center justify-center px-4">
+      <div className="max-w-4xl w-full text-center">
+        <h1 className="text-7xl md:text-8xl font-bold text-gray-900 mb-6">
+          Better<span className="text-blue-600">Bites</span>
+        </h1>
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-700 mb-12">
+          What do you want to swap?
+        </h2>
+        <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
+          <div className="relative">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search for snacks, foods, drinks..."
+              className="w-full px-8 py-6 text-xl rounded-2xl border-2 border-gray-300 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:border-blue-500 shadow-xl"
+            />
+            <button
+              type="submit"
+              className="absolute right-3 top-1/2 -translate-y-1/2 bg-blue-600 text-white p-4 rounded-xl hover:bg-blue-700 transition-all"
+            >
+              <Search size={28} />
+            </button>
           </div>
-        </div>
-        <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-4">
-          <p className="text-base font-semibold text-green-800 mb-3 flex items-center gap-2"><Heart size={20} />Health Benefits</p>
-          <div className="flex flex-wrap gap-2">
-            {product.benefits.map((b, i) => <span key={i} className="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">{b}</span>)}
+        </form>
+        
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="text-5xl mb-4">🎯</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Personalized</h3>
+            <p className="text-gray-600">Tailored to your family's needs and preferences</p>
           </div>
-        </div>
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
-          <p className="text-base font-semibold text-blue-800 mb-3 flex items-center gap-2"><MapPin size={20} />Available at these stores</p>
-          <div className="flex flex-wrap gap-3">
-            {product.stores.map((s, i) => <span key={i} className="bg-blue-100 text-blue-700 px-5 py-2 rounded-lg text-sm font-medium">{s}</span>)}
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="text-5xl mb-4">💚</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Healthier Options</h3>
+            <p className="text-gray-600">Find better alternatives that kids will love</p>
           </div>
-        </div>
-        <button className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-xl font-semibold shadow-lg text-lg">Add to Shopping List</button>
-      </div>
-      <div className="space-y-6">
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2"><Package size={28} className="text-green-600" />Nutrition Facts</h3>
-          <div className="border-t-8 border-black pt-2">
-            <p className="text-sm font-bold mb-1">Serving Size: {product.detailedNutrition.servingSize}</p>
-            <div className="border-t-4 border-black my-2"></div>
-            <div className="flex justify-between items-center border-b border-gray-300 pb-1 mb-2">
-              <span className="font-bold text-lg">Calories</span>
-              <span className="font-bold text-2xl">{product.detailedNutrition.calories}</span>
-            </div>
-            <div className="border-t-4 border-gray-400 pt-2">
-              <p className="text-xs text-right font-bold mb-2">% Daily Value*</p>
-              <NutritionRow label="Total Fat" value={product.detailedNutrition.totalFat} bold />
-              <NutritionRow label="Saturated Fat" value={product.detailedNutrition.saturatedFat} indent />
-              <NutritionRow label="Trans Fat" value={product.detailedNutrition.transFat} indent />
-              <NutritionRow label="Cholesterol" value={product.detailedNutrition.cholesterol} bold />
-              <NutritionRow label="Sodium" value={product.detailedNutrition.sodium} bold />
-              <NutritionRow label="Total Carbohydrate" value={product.detailedNutrition.totalCarbs} bold />
-              <NutritionRow label="Dietary Fiber" value={product.detailedNutrition.dietaryFiber} indent />
-              <NutritionRow label="Total Sugars" value={product.detailedNutrition.totalSugars} indent />
-              <NutritionRow label="Added Sugars" value={product.detailedNutrition.addedSugars} indent2 />
-              <NutritionRow label="Protein" value={product.detailedNutrition.protein} bold />
-            </div>
-            <div className="border-t-4 border-black mt-4 pt-2">
-              <p className="text-xs text-gray-600">* The % Daily Value tells you how much a nutrient in a serving of food contributes to a daily diet.</p>
-            </div>
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="text-5xl mb-4">⚡</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Quick & Easy</h3>
+            <p className="text-gray-600">Get instant results with smart filters</p>
           </div>
-        </div>
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ingredients</h3>
-          <p className="text-base text-gray-700 leading-relaxed">{product.ingredients}</p>
         </div>
       </div>
+    </div>
+  );
+};
+
+// Auth Page
+const AuthPage = ({ onLogin }) => {
+  const [isLogin, setIsLogin] = useState(true);
+  const [formData, setFormData] = useState({ name: '', email: '', password: '' });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Simulate login/signup
+    onLogin({ name: formData.name || 'Parent User', email: formData.email });
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 flex items-center justify-center px-4">
+      <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl p-8">
+        <h2 className="text-4xl font-bold text-center text-gray-900 mb-2">
+          Better<span className="text-blue-600">Bites</span>
+        </h2>
+        <p className="text-center text-gray-600 mb-8">
+          {isLogin ? 'Welcome back!' : 'Join our community'}
+        </p>
+        
+        <form onSubmit={handleSubmit} className="space-y-4">
+          {!isLogin && (
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+              <input
+                type="text"
+                value={formData.name}
+                onChange={(e) => setFormData({...formData, name: e.target.value})}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+            </div>
+          )}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+            <input
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({...formData, email: e.target.value})}
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
+            <input
+              type="password"
+              value={formData.password}
+              onChange={(e) => setFormData({...formData, password: e.target.value})}
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all shadow-lg"
+          >
+            {isLogin ? 'Log In' : 'Sign Up'}
+          </button>
+        </form>
+        
+        <p className="text-center mt-6 text-gray-600">
+          {isLogin ? "Don't have an account? " : "Already have an account? "}
+          <button
+            onClick={() => setIsLogin(!isLogin)}
+            className="text-blue-600 font-semibold hover:underline"
+          >
+            {isLogin ? 'Sign Up' : 'Log In'}
+          </button>
+        </p>
+      </div>
+    </div>
+  );
+};
+
+// Profile Sidebar
+const ProfileSidebar = ({ user, favorites, savedResults, onProfileClick }) => (
+  <div className="bg-white rounded-2xl shadow-lg p-6 sticky top-24">
+    <div className="flex items-center gap-3 mb-6">
+      <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+        <User size={24} className="text-white" />
+      </div>
+      <div className="flex-1">
+        <h3 className="font-bold text-gray-900">{user.name}</h3>
+        <p className="text-sm text-gray-500">{user.email}</p>
+      </div>
+    </div>
+    
+    <button
+      onClick={onProfileClick}
+      className="w-full mb-6 px-4 py-2 bg-blue-50 text-blue-600 rounded-lg font-semibold hover:bg-blue-100 transition-all"
+    >
+      Manage Profile
+    </button>
+    
+    <div className="mb-6">
+      <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+        <Heart size={18} className="text-red-500" />
+        Favorites
+      </h4>
+      {favorites.length > 0 ? (
+        <ul className="space-y-2">
+          {favorites.map((item, i) => (
+            <li key={i} className="text-sm text-gray-700 bg-gray-50 p-2 rounded-lg">
+              {item}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-sm text-gray-500 italic">No favorites yet</p>
+      )}
+    </div>
+    
+    <div>
+      <h4 className="font-bold text-gray-900 mb-3">Saved Results</h4>
+      {savedResults.length > 0 ? (
+        <ul className="space-y-2">
+          {savedResults.map((item, i) => (
+            <li key={i} className="text-sm text-gray-700 bg-gray-50 p-2 rounded-lg">
+              {item}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-sm text-gray-500 italic">No saved results</p>
+      )}
     </div>
   </div>
 );
 
-// Main App Component
-function App() {
-  const [scanned, setScanned] = useState(false);
-  const [scanning, setScanning] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null);
+// Search Results Page
+const SearchResultsPage = ({ query, user, onBack, onProfileClick }) => {
+  const [showFilters, setShowFilters] = useState(false);
+  const [filters, setFilters] = useState({
+    texture: '',
+    healthScore: 5,
+    allergens: [],
+    availability: 'all',
+    childProfile: ''
+  });
+  
+  const [favorites, setFavorites] = useState(['Organic Fruit Strips', 'Veggie Chips']);
+  const [savedResults, setSavedResults] = useState(['Healthy Cookie Swap']);
 
-  const alternatives = [
-    { name: "Organic Oat Cookies", brand: "Nature's Best", image: "🍪", healthScore: 8.5, benefits: ["Whole Grains", "Low Sugar", "Natural Ingredients"], price: "$4.99", stores: ["Whole Foods", "Target", "Sprouts"], nutrition: { calories: 90, sugar: "3g", sodium: "45mg", fat: "3g" }, detailedNutrition: { servingSize: "2 cookies (28g)", calories: 90, totalFat: "3g", saturatedFat: "0.5g", transFat: "0g", cholesterol: "0mg", sodium: "45mg", totalCarbs: "14g", dietaryFiber: "2g", totalSugars: "3g", addedSugars: "2g", protein: "2g" }, ingredients: "Organic oats, organic coconut oil, organic cane sugar, organic vanilla extract, sea salt, baking soda" },
-    { name: "Apple Cinnamon Bites", brand: "Happy Kids", image: "🍎", healthScore: 9.0, benefits: ["No Added Sugar", "Real Fruit", "High Fiber"], price: "$3.99", stores: ["Trader Joe's", "Walmart", "Kroger"], nutrition: { calories: 70, sugar: "2g", sodium: "20mg", fat: "1g" }, detailedNutrition: { servingSize: "1 pouch (25g)", calories: 70, totalFat: "1g", saturatedFat: "0g", transFat: "0g", cholesterol: "0mg", sodium: "20mg", totalCarbs: "15g", dietaryFiber: "3g", totalSugars: "2g", addedSugars: "0g", protein: "1g" }, ingredients: "Organic apples, organic apple juice concentrate, organic cinnamon, citric acid" },
-    { name: "Banana Oat Bars", brand: "GoodMom", image: "🍌", healthScore: 8.0, benefits: ["Organic", "Kid-Approved", "Protein-Rich"], price: "$5.49", stores: ["Whole Foods", "Amazon Fresh", "Target"], nutrition: { calories: 95, sugar: "4g", sodium: "35mg", fat: "2g" }, detailedNutrition: { servingSize: "1 bar (30g)", calories: 95, totalFat: "2g", saturatedFat: "0.5g", transFat: "0g", cholesterol: "0mg", sodium: "35mg", totalCarbs: "17g", dietaryFiber: "2g", totalSugars: "4g", addedSugars: "1g", protein: "3g" }, ingredients: "Organic oats, organic bananas, organic honey, organic almond butter, organic vanilla, sea salt" }
+  // Mock results data
+  const results = [
+    { 
+      name: "Organic Oat Cookies", 
+      brand: "Nature's Best", 
+      image: "🍪", 
+      healthScore: 8.5, 
+      texture: "Crunchy",
+      taste: "Mildly Sweet",
+      ingredients: ["Organic oats", "Organic coconut oil", "Organic cane sugar"],
+      allergens: ["Gluten"],
+      price: "$4.99"
+    },
+    { 
+      name: "Apple Cinnamon Bites", 
+      brand: "Happy Kids", 
+      image: "🍎", 
+      healthScore: 9.0, 
+      texture: "Soft & Chewy",
+      taste: "Naturally Sweet",
+      ingredients: ["Organic apples", "Organic apple juice", "Cinnamon"],
+      allergens: [],
+      price: "$3.99"
+    },
+    { 
+      name: "Banana Oat Bars", 
+      brand: "GoodMom", 
+      image: "🍌", 
+      healthScore: 8.0, 
+      texture: "Soft",
+      taste: "Sweet & Nutty",
+      ingredients: ["Organic oats", "Organic bananas", "Organic honey"],
+      allergens: ["Tree Nuts"],
+      price: "$5.49"
+    },
+    { 
+      name: "Veggie Crisps", 
+      brand: "Garden Fresh", 
+      image: "🥕", 
+      healthScore: 7.5, 
+      texture: "Crispy",
+      taste: "Savory",
+      ingredients: ["Sweet potatoes", "Beets", "Sea salt"],
+      allergens: [],
+      price: "$3.49"
+    },
+    { 
+      name: "Fruit & Nut Mix", 
+      brand: "Trail Buddies", 
+      image: "🥜", 
+      healthScore: 8.8, 
+      texture: "Mixed",
+      taste: "Sweet & Salty",
+      ingredients: ["Almonds", "Raisins", "Cashews"],
+      allergens: ["Tree Nuts"],
+      price: "$6.99"
+    },
+    { 
+      name: "Rice Puffs", 
+      brand: "Puffed Treats", 
+      image: "🍚", 
+      healthScore: 7.0, 
+      texture: "Light & Airy",
+      taste: "Lightly Sweet",
+      ingredients: ["Brown rice", "Organic cane sugar"],
+      allergens: [],
+      price: "$2.99"
+    },
+    { 
+      name: "Chia Seed Pudding", 
+      brand: "Super Seeds", 
+      image: "🥄", 
+      healthScore: 9.5, 
+      texture: "Smooth & Creamy",
+      taste: "Vanilla",
+      ingredients: ["Chia seeds", "Coconut milk", "Vanilla"],
+      allergens: [],
+      price: "$4.49"
+    },
+    { 
+      name: "Whole Grain Crackers", 
+      brand: "Crunch Time", 
+      image: "🧈", 
+      healthScore: 7.8, 
+      texture: "Crunchy",
+      taste: "Savory",
+      ingredients: ["Whole wheat", "Olive oil", "Sea salt"],
+      allergens: ["Gluten"],
+      price: "$3.79"
+    },
+    { 
+      name: "Berry Smoothie Pops", 
+      brand: "Frozen Delights", 
+      image: "🍓", 
+      healthScore: 8.2, 
+      texture: "Frozen",
+      taste: "Berry Burst",
+      ingredients: ["Strawberries", "Blueberries", "Greek yogurt"],
+      allergens: ["Dairy"],
+      price: "$5.99"
+    },
+    { 
+      name: "Protein Energy Balls", 
+      brand: "Power Snacks", 
+      image: "⚡", 
+      healthScore: 8.9, 
+      texture: "Dense & Chewy",
+      taste: "Chocolate",
+      ingredients: ["Dates", "Peanut butter", "Cocoa"],
+      allergens: ["Peanuts"],
+      price: "$7.49"
+    }
   ];
 
+  const filteredResults = results.filter(item => item.healthScore >= filters.healthScore);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+      {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center">
-              <Leaf size={28} className="text-white" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">BetterBites</h1>
-              <p className="text-sm text-gray-500">Better food choices for your family</p>
-            </div>
+        <div className="max-w-7xl mx-auto px-8 py-4">
+          <div className="flex items-center justify-between mb-4">
+            <h1 className="text-3xl font-bold text-gray-900">
+              Better<span className="text-blue-600">Bites</span>
+            </h1>
           </div>
-          <div className="flex items-center gap-6">
-            <div className="relative hidden md:block">
-              <input type="text" placeholder="Search products..." className="w-96 px-4 py-2 pl-10 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
-              <Search size={20} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+          
+          {/* Search Bar */}
+          <div className="flex gap-4 items-center">
+            <div className="relative flex-1">
+              <input
+                type="text"
+                defaultValue={query}
+                placeholder="Search for snacks, foods, drinks..."
+                className="w-full px-4 py-3 pl-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
             </div>
-            <button className="p-2 hover:bg-gray-100 rounded-lg"><ShoppingCart size={24} className="text-gray-600" /></button>
-            <button className="p-2 hover:bg-gray-100 rounded-lg"><User size={24} className="text-gray-600" /></button>
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-all flex items-center gap-2"
+            >
+              <Filter size={20} />
+              Filters
+            </button>
           </div>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-8 py-12">
-        {selectedProduct ? (
-          <ProductDetails product={selectedProduct} onBack={() => setSelectedProduct(null)} />
-        ) : !scanned ? (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2">
-              <div className="bg-white rounded-2xl shadow-xl p-12">
-                <div className="max-w-2xl mx-auto text-center">
-                  <div className="w-48 h-48 mx-auto mb-8 bg-gradient-to-br from-green-100 to-blue-100 rounded-3xl flex items-center justify-center">
-                    {scanning ? <div className="w-32 h-32 border-8 border-green-500 border-t-transparent rounded-full animate-spin"></div> : <Camera size={96} className="text-green-600" />}
-                  </div>
-                  <h2 className="text-4xl font-bold text-gray-900 mb-4">{scanning ? "Scanning Product..." : "Scan a Product"}</h2>
-                  <p className="text-xl text-gray-600 mb-8">Upload an image or use your camera to scan any food product and discover healthier alternatives</p>
-                  <div className="flex gap-4 justify-center flex-wrap">
-                    <button onClick={() => { setScanning(true); setTimeout(() => { setScanning(false); setScanned(true); }, 1500); }} disabled={scanning} className="px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 text-lg">{scanning ? "Analyzing..." : "Start Camera Scan"}</button>
-                    <button onClick={() => { setScanning(true); setTimeout(() => { setScanning(false); setScanned(true); }, 1500); }} disabled={scanning} className="px-8 py-4 bg-white border-2 border-green-500 text-green-600 rounded-xl font-semibold hover:bg-green-50 transition-all disabled:opacity-50 text-lg">Upload Image</button>
-                  </div>
-                </div>
+      {/* Filters Panel */}
+      {showFilters && (
+        <div className="bg-white border-b shadow-lg">
+          <div className="max-w-7xl mx-auto px-8 py-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Texture</label>
+                <select
+                  value={filters.texture}
+                  onChange={(e) => setFilters({...filters, texture: e.target.value})}
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="">All Textures</option>
+                  <option value="crunchy">Crunchy</option>
+                  <option value="soft">Soft</option>
+                  <option value="chewy">Chewy</option>
+                  <option value="creamy">Creamy</option>
+                </select>
               </div>
-            </div>
-            <div className="space-y-6">
-              <div className="bg-white rounded-2xl shadow-lg p-6">
-                <h3 className="font-bold text-xl text-gray-900 mb-4 flex items-center gap-2"><Heart size={24} className="text-red-500" />How It Works</h3>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start gap-3"><span className="text-green-600 font-bold">1.</span><span>Scan any packaged food item with your camera</span></li>
-                  <li className="flex items-start gap-3"><span className="text-green-600 font-bold">2.</span><span>Get instant health ratings and concerns</span></li>
-                  <li className="flex items-start gap-3"><span className="text-green-600 font-bold">3.</span><span>Discover healthier alternatives nearby</span></li>
-                  <li className="flex items-start gap-3"><span className="text-green-600 font-bold">4.</span><span>Compare nutrition and make better choices</span></li>
-                </ul>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Min Health Score: {filters.healthScore}</label>
+                <input
+                  type="range"
+                  min="0"
+                  max="10"
+                  step="0.5"
+                  value={filters.healthScore}
+                  onChange={(e) => setFilters({...filters, healthScore: parseFloat(e.target.value)})}
+                  className="w-full"
+                />
               </div>
-              <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl shadow-lg p-6 text-white">
-                <h3 className="font-bold text-xl mb-3">Why BetterBites?</h3>
-                <p className="text-green-50 leading-relaxed">Make informed food choices for your family. Our AI-powered scanner identifies unhealthy ingredients and suggests better alternatives available at stores near you.</p>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Availability</label>
+                <select
+                  value={filters.availability}
+                  onChange={(e) => setFilters({...filters, availability: e.target.value})}
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="all">All Stores</option>
+                  <option value="local">Local Only</option>
+                  <option value="online">Online</option>
+                </select>
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Shopping For</label>
+                <select
+                  value={filters.childProfile}
+                  onChange={(e) => setFilters({...filters, childProfile: e.target.value})}
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="">Everyone</option>
+                  <option value="child1">Emma (Age 5)</option>
+                  <option value="child2">Noah (Age 8)</option>
+                </select>
               </div>
             </div>
           </div>
-        ) : (
-          <div className="space-y-8">
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Scanned Product</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="flex items-start gap-6">
-                  <div className="text-8xl">🍪</div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Chocolate Chip Cookies</h3>
-                    <p className="text-lg text-gray-600 mb-4">Sweet Treats</p>
-                    <HealthScore score={2.5} />
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="bg-red-50 border border-red-200 rounded-xl p-6">
-                    <p className="text-base font-semibold text-red-800 mb-3 flex items-center gap-2"><TrendingDown size={20} />Health Concerns</p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium">High Sugar</span>
-                      <span className="bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium">Artificial Colors</span>
-                      <span className="bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium">Trans Fats</span>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-4 gap-3">
-                    <div className="bg-gray-50 rounded-lg p-3 text-center"><div className="text-xs text-gray-500">Calories</div><div className="text-lg font-bold text-gray-900">160</div></div>
-                    <div className="bg-gray-50 rounded-lg p-3 text-center"><div className="text-xs text-gray-500">Sugar</div><div className="text-lg font-bold text-gray-900">12g</div></div>
-                    <div className="bg-gray-50 rounded-lg p-3 text-center"><div className="text-xs text-gray-500">Sodium</div><div className="text-lg font-bold text-gray-900">180mg</div></div>
-                    <div className="bg-gray-50 rounded-lg p-3 text-center"><div className="text-xs text-gray-500">Fat</div><div className="text-lg font-bold text-gray-900">8g</div></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        </div>
+      )}
 
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-8 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Results */}
+          <div className="lg:col-span-3">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              Healthier alternatives for "{query}" ({filteredResults.length} results)
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {filteredResults.map((item, i) => (
+                <div key={i} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="text-6xl">{item.image}</div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-xl text-gray-900">{item.name}</h3>
+                      <p className="text-sm text-gray-600 mb-2">{item.brand}</p>
+                      <div className="text-2xl font-bold text-blue-600">{item.price}</div>
+                    </div>
+                  </div>
+                  
+                  <div className="mb-3">
+                    <HealthScore score={item.healthScore} />
+                  </div>
+                  
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="font-semibold text-gray-700">Texture:</span>
+                      <span className="text-gray-600">{item.texture}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="font-semibold text-gray-700">Taste:</span>
+                      <span className="text-gray-600">{item.taste}</span>
+                    </div>
+                    <div className="text-sm">
+                      <span className="font-semibold text-gray-700">Key Ingredients:</span>
+                      <p className="text-gray-600 mt-1">{item.ingredients.join(', ')}</p>
+                    </div>
+                    {item.allergens.length > 0 && (
+                      <div className="flex items-start gap-2 text-sm">
+                        <span className="font-semibold text-red-600">Allergens:</span>
+                        <span className="text-red-600">{item.allergens.join(', ')}</span>
+                      </div>
+                    )}
+                  </div>
+                  
+                  <button
+                    onClick={() => setSavedResults([...savedResults, item.name])}
+                    className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition-all"
+                  >
+                    Save Result
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Profile Sidebar */}
+          <div className="lg:col-span-1">
+            <ProfileSidebar 
+              user={user}
+              favorites={favorites}
+              savedResults={savedResults}
+              onProfileClick={onProfileClick}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Profile Management Page
+const ProfilePage = ({ user, onBack }) => {
+  const [childProfiles, setChildProfiles] = useState([
+    { id: 1, name: 'Emma', age: 5, favorites: ['Apple slices', 'Yogurt'], allergies: ['Peanuts'], conditions: [] },
+    { id: 2, name: 'Noah', age: 8, favorites: ['Granola bars', 'Cheese'], allergies: [], conditions: ['Lactose sensitive'] }
+  ]);
+  
+  const [showAddChild, setShowAddChild] = useState(false);
+  const [newChild, setNewChild] = useState({ name: '', age: '', favorites: '', allergies: '', conditions: '' });
+
+  const handleAddChild = (e) => {
+    e.preventDefault();
+    const child = {
+      id: childProfiles.length + 1,
+      name: newChild.name,
+      age: parseInt(newChild.age),
+      favorites: newChild.favorites.split(',').map(s => s.trim()).filter(Boolean),
+      allergies: newChild.allergies.split(',').map(s => s.trim()).filter(Boolean),
+      conditions: newChild.conditions.split(',').map(s => s.trim()).filter(Boolean)
+    };
+    setChildProfiles([...childProfiles, child]);
+    setNewChild({ name: '', age: '', favorites: '', allergies: '', conditions: '' });
+    setShowAddChild(false);
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+      <header className="bg-white shadow-sm">
+        <div className="max-w-6xl mx-auto px-8 py-4">
+          <div className="flex items-center justify-between">
+            <h1 className="text-3xl font-bold text-gray-900">
+              Better<span className="text-blue-600">Bites</span>
+            </h1>
+            <button
+              onClick={onBack}
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-all"
+            >
+              Back to Search
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div className="max-w-6xl mx-auto px-8 py-12">
+        {/* User Profile */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Your Profile</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-2"><Leaf size={32} className="text-green-500" />Healthier Alternatives</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {alternatives.map((alt, i) => (
-                  <div key={i} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="text-6xl">{alt.image}</div>
-                      <div className="flex-1">
-                        <h4 className="font-bold text-xl text-gray-900">{alt.name}</h4>
-                        <p className="text-sm text-gray-600 mb-2">{alt.brand}</p>
-                        <div className="text-2xl font-bold text-green-600">{alt.price}</div>
-                      </div>
-                    </div>
-                    <HealthScore score={alt.healthScore} />
-                    <div className="bg-green-50 border border-green-200 rounded-xl p-4 my-4">
-                      <div className="flex flex-wrap gap-2">
-                        {alt.benefits.map((b, j) => <span key={j} className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">{b}</span>)}
-                      </div>
-                    </div>
-                    <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-4">
-                      <p className="text-xs font-semibold text-blue-800 mb-2">Available at:</p>
-                      <div className="flex flex-wrap gap-2">
-                        {alt.stores.map((s, j) => <span key={j} className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">{s}</span>)}
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-4 gap-2 mb-4">
-                      {Object.entries(alt.nutrition).map(([k, v]) => (
-                        <div key={k} className="bg-gray-50 rounded-lg p-2 text-center"><div className="text-xs text-gray-500 capitalize">{k}</div><div className="text-sm font-bold text-green-600">{v}</div></div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+              <input
+                type="text"
+                defaultValue={user.name}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <input
+                type="email"
+                defaultValue={user.email}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Child Profiles */}
+        <div className="bg-white rounded-2xl shadow-lg p-8">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">Child Profiles</h2>
+            <button
+              onClick={() => setShowAddChild(true)}
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-all flex items-center gap-2"
+            >
+              <Plus size={20} />
+              Add Child
+            </button>
+          </div>
+
+          {/* Add Child Form */}
+          {showAddChild && (
+            <div className="bg-blue-50 rounded-xl p-6 mb-6 border-2 border-blue-200">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-xl font-bold text-gray-900">Add New Child Profile</h3>
+                <button
+                  onClick={() => setShowAddChild(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  <X size={24} />
+                </button>
+              </div>
+              <form onSubmit={handleAddChild} className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                    <input
+                      type="text"
+                      value={newChild.name}
+                      onChange={(e) => setNewChild({...newChild, name: e.target.value})}
+                      className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Age</label>
+                    <input
+                      type="number"
+                      value={newChild.age}
+                      onChange={(e) => setNewChild({...newChild, age: e.target.value})}
+                      className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Favorite Foods (comma-separated)</label>
+                  <input
+                    type="text"
+                    value={newChild.favorites}
+                    onChange={(e) => setNewChild({...newChild, favorites: e.target.value})}
+                    placeholder="e.g., Apples, Crackers, Yogurt"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Allergies (comma-separated)</label>
+                  <input
+                    type="text"
+                    value={newChild.allergies}
+                    onChange={(e) => setNewChild({...newChild, allergies: e.target.value})}
+                    placeholder="e.g., Peanuts, Dairy, Gluten"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Health Conditions (comma-separated)</label>
+                  <input
+                    type="text"
+                    value={newChild.conditions}
+                    onChange={(e) => setNewChild({...newChild, conditions: e.target.value})}
+                    placeholder="e.g., Diabetes, Lactose intolerant"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all"
+                >
+                  Save Child Profile
+                </button>
+              </form>
+            </div>
+          )}
+
+          {/* Child Profile Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {childProfiles.map((child) => (
+              <div key={child.id} className="border-2 border-gray-200 rounded-xl p-6 hover:border-blue-300 transition-all">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">{child.name}</h3>
+                    <p className="text-gray-600">Age: {child.age}</p>
+                  </div>
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl">
+                    👶
+                  </div>
+                </div>
+                
+                {child.favorites.length > 0 && (
+                  <div className="mb-3">
+                    <p className="text-sm font-semibold text-gray-700 mb-2">Favorite Foods:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {child.favorites.map((food, i) => (
+                        <span key={i} className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs">
+                          {food}
+                        </span>
                       ))}
                     </div>
-                    <button onClick={() => setSelectedProduct(alt)} className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all">View Details</button>
                   </div>
-                ))}
+                )}
+                
+                {child.allergies.length > 0 && (
+                  <div className="mb-3">
+                    <p className="text-sm font-semibold text-red-700 mb-2">Allergies:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {child.allergies.map((allergy, i) => (
+                        <span key={i} className="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs">
+                          {allergy}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {child.conditions.length > 0 && (
+                  <div>
+                    <p className="text-sm font-semibold text-orange-700 mb-2">Health Conditions:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {child.conditions.map((condition, i) => (
+                        <span key={i} className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs">
+                          {condition}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
-              <button onClick={() => setScanned(false)} className="w-full mt-8 bg-gray-100 text-gray-700 py-4 rounded-2xl font-semibold hover:bg-gray-200 transition-all text-lg">Scan Another Product</button>
-            </div>
+            ))}
           </div>
-        )}
-      </main>
+        </div>
+      </div>
     </div>
+  );
+};
+
+// Main App Component
+function App() {
+  const [currentPage, setCurrentPage] = useState('welcome'); // 'welcome', 'auth', 'search', 'profile'
+  const [user, setUser] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleWelcomeSearch = (query) => {
+    setSearchQuery(query);
+    setCurrentPage('auth');
+  };
+
+  const handleLogin = (userData) => {
+    setUser(userData);
+    setCurrentPage('search');
+  };
+
+  const handleProfileClick = () => {
+    setCurrentPage('profile');
+  };
+
+  const handleBackToSearch = () => {
+    setCurrentPage('search');
+  };
+
+  return (
+    <>
+      {currentPage === 'welcome' && (
+        <WelcomePage onSearch={handleWelcomeSearch} />
+      )}
+      
+      {currentPage === 'auth' && (
+        <AuthPage onLogin={handleLogin} />
+      )}
+      
+      {currentPage === 'search' && user && (
+        <SearchResultsPage 
+          query={searchQuery} 
+          user={user}
+          onBack={() => setCurrentPage('welcome')}
+          onProfileClick={handleProfileClick}
+        />
+      )}
+      
+      {currentPage === 'profile' && user && (
+        <ProfilePage 
+          user={user}
+          onBack={handleBackToSearch}
+        />
+      )}
+    </>
   );
 }
 
